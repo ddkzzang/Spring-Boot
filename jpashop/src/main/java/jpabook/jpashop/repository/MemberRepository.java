@@ -8,12 +8,11 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 import jpabook.jpashop.domain.Member;
-import lombok.RequiredArgsConstructor;
 
 @Repository
-@RequiredArgsConstructor
 public class MemberRepository {
 	
+	@PersistenceContext
 	private EntityManager em; // 스프링이 entity를 자동 생성
 	// EnntityManager은 @PersistenceContext로만 injection이 가능
 		
